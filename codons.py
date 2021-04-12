@@ -6,7 +6,8 @@
 dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
 
 # your code goes here
-
+for c in dna:
+	print(c)
 """
 python3 codons.py
 ATA
