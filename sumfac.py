@@ -6,9 +6,15 @@
 # Use the same loop for both calculations
 
 n = 5
-
+sum = 0
+mul = 1
 for i in range(1, n+1):
-	print(i)
+	sum += i
+	mul *= i
+print(i, sum, mul)
+	
+	
+	
 
 """
 python3 sumfac.py
