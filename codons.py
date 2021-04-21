@@ -7,7 +7,7 @@ dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
 i = 0
 for i in range(0, len(dna), 3):
 	print(dna[i:i+3])
-	
+
 # your code goes here
 
 """
