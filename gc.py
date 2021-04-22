@@ -10,7 +10,7 @@ for i in range(len(dna) -1):
 	if dna[i] == 'G' or dna[i] == 'C':
 		i = 1
 		sum += i
-GC = sum/k
+GC = sum/11
 print("%.2f" % GC)
 print('{:.2f}'.format(GC))
 print(f'{GC:.2f}')

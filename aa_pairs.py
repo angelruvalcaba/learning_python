@@ -3,14 +3,16 @@
 # Print out all the unique pairwise amino acid combinations
 # AC is the same as CA
 # Skip AA, CC etc.
-# Also print out how many combinations there are
-
-aa = 'ACDEFGHIKLMNPQRSTVWY'
-i = 0
-for i in range(len(aa)):
-	i += 0
-	print(aa[i], aa[i-1])
-
+aa = ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']
+#or
+nt = ('ACDEFGHIKLMNPQRSTVWY')
+k = 0
+for i in range(0, len(nt)):
+	for c in range(i + 1, len(nt)):
+		if i!=c:
+			print(nt[i], nt[c])
+			k +=1
+print(k)
 """
 python3 aa_pairs.py
 A C
