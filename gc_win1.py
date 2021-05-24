@@ -4,13 +4,13 @@
 # Window size is 11 nt
 # Output with 4 significant figures using whichever method you prefer
 # Use nested loops
-
+w = 11
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 for i in range(len(seq)):
-	window = seq[i: i+11]
+	window = seq[i: i+w]
 	GC = window.count('C') + window.count('G')
-	fracGC = GC/11
-	if len(window) < 11: break
+	fracGC = GC/w
+	if len(window) < w: break
 	print(i, window, "%.4f" % fracGC)
 
 

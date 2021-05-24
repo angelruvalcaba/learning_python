@@ -28,7 +28,6 @@ for n in range(len(p)):
 SD = (x/i)**(1/2)
 print(SD)
 #Median
-print(p)
 pos1 = int((i+1)/2)
 pos2 = (i/2)
 pos3 = (pos1+pos2)/2
@@ -37,8 +36,6 @@ r = i%2
 if r == 0:
 	print([pos3-1]) #must subtract 1 because of python numbering system
 elif r!= 0: print(float(p[pos1-1]))
-
-	
 """
 
 python3 stats.py 3 1 4 1 5

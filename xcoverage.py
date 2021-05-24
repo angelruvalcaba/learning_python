@@ -9,12 +9,29 @@
 
 import sys
 import random
-g = sys.argv[1]
-n = sys.argv[2]
-l = sys.argv[3]
-dup = []
+gs = int(sys.argv[1])
+nr = int(sys.argv[2])
+rl = int(sys.argv[3])
+#make empty genome (like calendar)
 genome = []
+for i in range(gs):
+	genome.append(0)
 
+for i in range(nr): #genome is read nr times, starting at random spots for a span of 5 bases
+	start = random.randint(0, gs-rl) #can't include sequencing beyond the ends
+	end = start + rl
+	for j in range(start, end):
+		genome[j] += 1 #each point per hit
+#print(genome)
+max = genome[rl] #hits at position 5, excluding ends again
+min = genome[rl]
+print(genome[rl])
+total = 0
+for hits in genome[rl:-rl]: #excluding ends
+	if hits > max: max = hits
+	if hits < min: min = hits
+	total += 1
+print(min,max, total/(gs - 2 * rl))
 
 """
 python3 xcoverage.py 1000 100 100
