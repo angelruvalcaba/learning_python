@@ -1,5 +1,5 @@
 from numpy import random
-
+import math
 # picks numbers between 0 and 1
 # round ends when the sum of the numbers is greater than 1
 # sx is the sum of the numbers (x)
@@ -8,17 +8,17 @@ from numpy import random
 
 rounds = []
 def game():
-	sx, r = 0.0, 0
-	print('Your numbers:')
+	sx, r = 0.0, 0.0
+	#print('Your numbers:')
 	while sx <= 1:
 		x = random.uniform(0,1)
 		sx += x
 		r += 1
-		print(x)
+		#print(x)
 	rounds.append(r)
 	#print(rounds)
-	print('your game lasted ' + str(r) + ' rounds')
-trials = 5
+	#print('your game lasted ' + str(r) + ' rounds')
+trials = 500000
 for i in range(trials):
 	game()
 score = sum(rounds)
